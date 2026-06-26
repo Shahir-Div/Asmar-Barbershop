@@ -1,0 +1,264 @@
+/* ═══════════════════════════════════════════════════════════════
+   ASMAR BARBERSHOP — Responsive Styles
+   ═══════════════════════════════════════════════════════════════
+   Mobile-first responsive breakpoints.
+   Breakpoints: 480px, 768px, 1024px, 1280px
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Mobile Base (< 480px) ── */
+@media (max-width: 479px) {
+  /* Navigation */
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .nav__lang {
+    display: none;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about__visual {
+    order: -1;
+  }
+
+  .about__image-wrap {
+    aspect-ratio: 16/10;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  .gallery__item--tall {
+    grid-row: span 1;
+    aspect-ratio: 1;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__map {
+    min-height: 300px;
+  }
+
+  .contact__map iframe {
+    min-height: 300px;
+  }
+
+  /* Footer */
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__brand {
+    max-width: 100%;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+/* ── Tablet (480px - 768px) ── */
+@media (min-width: 480px) and (max-width: 767px) {
+  /* Navigation */
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about__image-wrap {
+    aspect-ratio: 16/10;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── Laptop (768px - 1024px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Navigation */
+  .nav__links {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .nav__cta {
+    display: inline-flex;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ── Desktop (1024px - 1280px) ── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav__links {
+    gap: var(--space-5);
+  }
+}
+
+
+/* ── Wide Screens (> 1280px) ── */
+@media (min-width: 1280px) {
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ── Landscape Mobile ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    height: auto;
+    padding: var(--space-10) 0;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+
+/* ── High DPI / Retina ── */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero__video {
+    /* Video handles itself */
+  }
+}
+
+
+/* ── Print Styles ── */
+@media print {
+  .nav,
+  .hero__scroll,
+  .whatsapp-float,
+  .hero__glow,
+  .gallery__overlay,
+  .hero__media {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding: 2rem 0;
+  }
+}

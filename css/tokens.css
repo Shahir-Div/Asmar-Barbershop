@@ -1,0 +1,210 @@
+/* ═══════════════════════════════════════════════════════════════
+   ASMAR BARBERSHOP — Design Tokens
+   ═══════════════════════════════════════════════════════════════
+   Centralized design tokens for consistent styling across
+   the entire application. All visual decisions live here.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─────────────────────────────────────────────────────────────
+     COLOR SYSTEM
+     ───────────────────────────────────────────────────────────── */
+
+  /* Primary — Hot Pink/Magenta (Brand Identity) */
+  --color-primary: #D6338E;
+  --color-primary-light: #E85DAB;
+  --color-primary-dark: #B02870;
+  --color-primary-glow: rgba(214, 51, 142, 0.4);
+  --color-primary-subtle: rgba(214, 51, 142, 0.08);
+  --color-primary-border: rgba(214, 51, 142, 0.2);
+
+  /* Secondary — Deep Purple */
+  --color-secondary: #462C7D;
+  --color-secondary-glow: rgba(70, 44, 125, 0.3);
+
+  /* Accent — Blush Pink */
+  --color-accent: #FFB6C1;
+  --color-accent-subtle: rgba(255, 182, 193, 0.1);
+
+  /* Neutrals — Dark Scale */
+  --color-black: #000000;
+  --color-bg: #0A0A0C;
+  --color-surface: #111114;
+  --color-surface-light: #1A1A1F;
+  --color-surface-hover: #222228;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+
+  /* Text Colors */
+  --color-text: #FFFFFF;
+  --color-text-secondary: #9A9A9A;
+  --color-text-tertiary: #5A5A5A;
+  --color-text-inverse: #0A0A0C;
+
+  /* State Colors */
+  --color-success: #2ECC71;
+  --color-error: #E74C3C;
+  --color-warning: #F39C12;
+
+  /* External Brand Colors */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+  --color-instagram: #E4405F;
+  --color-facebook: #1877F2;
+
+  /* ─────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ───────────────────────────────────────────────────────────── */
+
+  /* Font Families */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent: 'Bebas Neue', Impact, sans-serif;
+  --font-arabic: 'Tajawal', 'Cairo', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  /* Font Sizes — Fluid Typography */
+  --text-hero: clamp(3rem, 8vw, 7rem);
+  --text-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 4vw, 3.5rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-h4: clamp(1.25rem, 2vw, 1.5rem);
+  --text-body: clamp(1rem, 1.2vw, 1.125rem);
+  --text-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --text-small: clamp(0.875rem, 1vw, 0.9375rem);
+  --text-caption: clamp(0.75rem, 0.8vw, 0.8125rem);
+  --text-label: 0.75rem;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.2em;
+
+  /* ─────────────────────────────────────────────────────────────
+     SPACING SYSTEM (Base: 8px)
+     ───────────────────────────────────────────────────────────── */
+
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.5rem;     /* 24px */
+  --space-6: 2rem;       /* 32px */
+  --space-7: 2.5rem;     /* 40px */
+  --space-8: 3rem;       /* 48px */
+  --space-9: 4rem;       /* 64px */
+  --space-10: 5rem;      /* 80px */
+  --space-11: 6rem;      /* 96px */
+  --space-12: 8rem;      /* 128px */
+  --space-13: 10rem;     /* 160px */
+  --space-14: 12rem;     /* 192px */
+
+  /* Section Spacing */
+  --section-padding: clamp(5rem, 12vw, 10rem);
+
+  /* ─────────────────────────────────────────────────────────────
+     BORDER RADIUS
+     ───────────────────────────────────────────────────────────── */
+
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ─────────────────────────────────────────────────────────────
+     SHADOW SYSTEM
+     ───────────────────────────────────────────────────────────── */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.6);
+
+  /* ─────────────────────────────────────────────────────────────
+     GLOW SYSTEM (Pink Neon)
+     ───────────────────────────────────────────────────────────── */
+
+  --glow-sm: 0 0 10px rgba(214, 51, 142, 0.2);
+  --glow-md: 0 0 20px rgba(214, 51, 142, 0.3);
+  --glow-lg: 0 0 40px rgba(214, 51, 142, 0.4);
+  --glow-xl: 0 0 80px rgba(214, 51, 142, 0.3);
+  --glow-intense: 0 0 120px rgba(214, 51, 142, 0.5);
+
+  /* ─────────────────────────────────────────────────────────────
+     ANIMATION TIMING
+     ───────────────────────────────────────────────────────────── */
+
+  /* Easing Curves */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-reveal: 1000ms;
+
+  /* Delays */
+  --delay-none: 0ms;
+  --delay-stagger-1: 100ms;
+  --delay-stagger-2: 200ms;
+  --delay-stagger-3: 300ms;
+  --delay-stagger-4: 400ms;
+  --delay-stagger-5: 500ms;
+
+  /* ─────────────────────────────────────────────────────────────
+     GRID SYSTEM
+     ───────────────────────────────────────────────────────────── */
+
+  --container-max: 1280px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+  --grid-columns: 12;
+  --grid-gap: clamp(1rem, 3vw, 1.5rem);
+
+  /* ─────────────────────────────────────────────────────────────
+     Z-INDEX SCALE
+     ───────────────────────────────────────────────────────────── */
+
+  --z-below: -1;
+  --z-base: 0;
+  --z-above: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-navbar: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+  --z-max: 9999;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RTL Support — Arabic Language Overrides
+   ═══════════════════════════════════════════════════════════════ */
+
+[dir="rtl"] {
+  --font-body: 'Tajawal', 'Cairo', sans-serif;
+  --font-display: 'Tajawal', 'Cairo', sans-serif;
+}

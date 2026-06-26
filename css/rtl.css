@@ -1,0 +1,154 @@
+/* ═══════════════════════════════════════════════════════════════
+   ASMAR BARBERSHOP — RTL (Right-to-Left) Support
+   ═══════════════════════════════════════════════════════════════
+   Arabic language layout adjustments.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── General RTL ── */
+[dir="rtl"] {
+  /* Typography */
+  --font-body: 'Tajawal', 'Cairo', sans-serif;
+  --font-display: 'Tajawal', 'Cairo', sans-serif;
+
+  /* Text alignment */
+  text-align: right;
+}
+
+/* ── Navigation RTL ── */
+[dir="rtl"] .nav__links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav__link::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .nav__actions {
+  flex-direction: row-reverse;
+}
+
+/* ── Hero RTL ── */
+[dir="rtl"] .hero__subtitle {
+  text-align: right;
+}
+
+[dir="rtl"] .hero__actions {
+  flex-direction: row-reverse;
+}
+
+/* ── About RTL ── */
+[dir="rtl"] .about__grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .about__text {
+  text-align: right;
+}
+
+/* ── Services RTL ── */
+[dir="rtl"] .service-card__link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .service-card__link svg {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .service-card__link:hover svg {
+  transform: rotate(180deg) translateX(-4px);
+}
+
+/* ── Gallery RTL ── */
+[dir="rtl"] .gallery__cta {
+  direction: rtl;
+}
+
+/* ── Contact RTL ── */
+[dir="rtl"] .contact__card {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+[dir="rtl"] .contact__grid {
+  direction: rtl;
+}
+
+/* ── Footer RTL ── */
+[dir="rtl"] .footer__inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer__links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer__social {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer__bottom {
+  direction: rtl;
+}
+
+/* ── Mobile Menu RTL ── */
+[dir="rtl"] .nav__mobile-links {
+  direction: rtl;
+}
+
+/* ── Language Switch RTL ── */
+[dir="rtl"] .nav__lang {
+  flex-direction: row-reverse;
+}
+
+/* ── Hero Content RTL ── */
+[dir="rtl"] .hero__content {
+  text-align: right;
+}
+
+[dir="rtl"] .hero__content .btn {
+  flex-direction: row-reverse;
+}
+
+/* ── WhatsApp Float RTL ── */
+[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: var(--space-6);
+}
+
+/* ── Section Headers RTL ── */
+[dir="rtl"] .section-header {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header .section-subtitle {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* ── Responsive RTL ── */
+@media (max-width: 479px) {
+  [dir="rtl"] .hero__actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  [dir="rtl"] .footer__inner {
+    align-items: center;
+    text-align: center;
+  }
+
+  [dir="rtl"] .footer__links {
+    justify-content: center;
+  }
+}
+
+/* ── Animations RTL ── */
+[dir="rtl"] .reveal[data-reveal]:nth-child(2),
+[dir="rtl"] .reveal[data-reveal]:nth-child(3),
+[dir="rtl"] .reveal[data-reveal]:nth-child(4),
+[dir="rtl"] .reveal[data-reveal]:nth-child(5),
+[dir="rtl"] .reveal[data-reveal]:nth-child(6) {
+  transition-delay: 100ms;
+}
